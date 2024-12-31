@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .image-section {
+            flex: 1;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .content-section {
+            flex: 2;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .project {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .project h3 {
+            margin: 0.5rem 0;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background-color: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-section">
+        <img src="C:\Users\sahit\Downloads\WhatsApp Image 2024-12-14 at 10.48.20_526c7679.jpg" alt="Profile Image">
+    </div>
+
+    <div class="content-section">
+        <header>
+            <h1>MY PORTOFOLIO</h1>
+        </header>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="container">
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <p>Hello! I'm a JANUPALLI SAHITHI Persuing Final Year B.TECH in Ravindra College Of Engineering For Women in Computer Science And Engineering</p>
+                <p>Skills: C(Basics), Python, JAVA, HTML, CSS and JavaScript</p>
+            </section>
+
+            <section id="projects" class="section">
+                <h2>Projects</h2>
+                <div class="projects">
+                    <div class="project">
+                        <img src="project1.jpg" alt="Project 1">
+                        <h3>Project 1</h3>
+                        <p>Personal Protofolio Website:</p>
+                        <p>Built using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="project">
+                        <img src="project2.jpg" alt="Project 2">
+                        <h3>Project 2</h3>
+                        <p>Weather App:</p>
+                        <p>A weather forecasting app built with React and an open API to display current weather data.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="project">
+                        <img src="project3.jpg" alt="Project 3">
+                        <h3>Project 3</h3>
+                        <p>Calculator:</p>
+                        <p>A simple web-based calculator created using JavaScript for practice with event handling and logic.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2>Contact</h2>
+                <div class="contact">
+                    <form action="#" method="post">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit">Thank You</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
+

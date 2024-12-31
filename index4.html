@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            background-color: #f4f4f4;
+        }
+
+        li span {
+            flex: 1;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TODO LIST</h1>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Input Box" required>
+            <input type="text" id="todo-input" placeholder="Add" required>
+            <input type="text" id="todo-input" placeholder="Delete" required>
+            <button type="submit"></button>
+        </form>
+        <ul id="todo-list">
+            <li>
+                <span>Task 1</span>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li>
+                <span>Task 2</span>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li>
+                <span>Task 3</span>
+                <button class="delete-btn">Delete</button>
+            </li>
+        </ul>
+        <ul id="todo-list">
+    <li>
+        <span>Task 1</span>
+        <button class="delete-btn">Delete</button>
+    </li>
+    <li>
+        <span>Task 2</span>
+        <button class="delete-btn">Delete</button>
+    </li>
+    <li>
+        <span>Task 3</span>
+        <button class="delete-btn">Delete</button>
+    </li>
+    <li>
+        <span>Task 4</span>
+        <button class="delete-btn">Delete</button>
+    </li>
+    <li>
+        <span>Task 5</span>
+        <button class="delete-btn">Delete</button>
+    </li>
+    <li>
+        <span>Task 6</span>
+        <button class="delete-btn">Delete</button>
+    </li>
+    <li>
+        <span>Task 7</span>
+        <button class="delete-btn">Delete</button>
+    </li>
+    <li>
+        <span>Task 8</span>
+        <button class="delete-btn">Delete</button>
+    </li>
+    <li>
+        <span>Task 9</span>
+        <button class="delete-btn">Delete</button>
+    </li>
+    <li>
+        <span>Task 10</span>
+        <button class="delete-btn">Delete</button>
+    </li>
+</ul>
+
+    </div>
+
+    <script>
+        const todoForm = document.getElementById('todo-form');
+        const todoInput = document.getElementById('todo-input');
+        const todoList = document.getElementById('todo-list');
+
+        todoForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const task = todoInput.value.trim();
+
+            if (task !== '') {
+                const li = document.createElement('li');
+                const span = document.createElement('span');
+                span.textContent = task;
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Delete';
+                deleteBtn.classList.add('delete-btn');
+                deleteBtn.addEventListener('click', function() {
+                    li.remove();
+                });
+
+                li.appendChild(span);
+                li.appendChild(deleteBtn);
+                todoList.appendChild(li);
+
+                todoInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
